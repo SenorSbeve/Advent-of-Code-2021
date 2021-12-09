@@ -22,8 +22,8 @@ for (let i = 0; i < data[0].length; i++) {
   epsilon +=
     least.filter((v) => v[i] == "0").length > least.length / 2 ? "1" : "0";
 
-  if (most.length > 1) most = most.filter((v) => v[i] == aGamma);
-  if (least.length > 1) least = least.filter((v) => v[i] == aEpsilon);
+  if (most.length > 1) most = most.filter((v) => v[i] == gamma[i]);
+  if (least.length > 1) least = least.filter((v) => v[i] == epsilon[i]);
 }
 
 console.log(parseInt(most, 2) * parseInt(least, 2));
