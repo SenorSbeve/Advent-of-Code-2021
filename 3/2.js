@@ -13,20 +13,14 @@ let diagnostics = fs
 
 let data = diagnostics;
 
-let gamma = "";
-let epsilon = "";
-
-let most = data;
-let least = data;
+let gamma = (epsilon = "");
+let most = (least = data);
 
 for (let i = 0; i < data[0].length; i++) {
-  let aGamma =
+  gamma +=
     most.filter((v) => v[i] == "0").length <= most.length / 2 ? "1" : "0";
-  let aEpsilon =
+  epsilon +=
     least.filter((v) => v[i] == "0").length > least.length / 2 ? "1" : "0";
-
-  gamma += aGamma;
-  epsilon += aEpsilon;
 
   if (most.length > 1) most = most.filter((v) => v[i] == aGamma);
   if (least.length > 1) least = least.filter((v) => v[i] == aEpsilon);
