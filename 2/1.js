@@ -19,8 +19,6 @@ data.forEach((v) => {
   let str = v.split(" ");
   let num = Number(str[1]);
 
-  console.log(str[0].includes("down"), num);
-
   str[0].includes("forward")
     ? (x += num)
     : str[0].includes("down")
